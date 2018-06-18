@@ -7,6 +7,10 @@ Dependencies:
 - https://www.npmjs.com/package/bip39
 - https://www.npmjs.com/package/hdkey
 
+## Status:
+- Geth server isn't accepting the send function from web3
+- Error while connecting to server
+
 
 References:
 - https://medium.com/bitcraft/so-you-want-to-build-an-ethereum-hd-wallet-cb2b7d7e4998
