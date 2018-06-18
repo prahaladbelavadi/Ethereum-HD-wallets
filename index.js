@@ -1,6 +1,7 @@
 const bip39 = require('bip39')
 const hdkey = require('./node_modules/hdkey/lib/hdkey.js')
 const ethUtil = require('ethereumjs-util')
+const ethTx = require('ethereumjs-tx')
 
 const mnemonic = bip39.generateMnemonic(); //generates string
 console.log("Mnemonic:",mnemonic);
@@ -36,7 +37,7 @@ const params = {
   gasLimit: 21000,
   chainId: 3
 }
-
 const tx = new ethTx(params);
 tx.sign(addrNode._privateKey); // Signing the transaction
 const serializedTx = tx.serialize()
+console.log('Serialized transaction:',serializedTx.toString('hex'));
