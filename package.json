@@ -1,0 +1,26 @@
+{
+  "name": "ethereum-hd-wallets",
+  "version": "1.0.0",
+  "description": "An attempt at creating ethereum HD wallets using BIP 44 and BIP 39",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prahaladbelavadi/Ethereum-HD-wallets.git"
+  },
+  "keywords": [
+    "eth"
+  ],
+  "author": "Prahalad Belavadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prahaladbelavadi/Ethereum-HD-wallets/issues"
+  },
+  "homepage": "https://github.com/prahaladbelavadi/Ethereum-HD-wallets#readme",
+  "dependencies": {
+    "bip39": "^2.5.0",
+    "hdkey": "^1.0.0"
+  }
+}
