@@ -14,6 +14,9 @@ const root = hdkey.fromMasterSeed(seed)
 const masterPrivateKey = root.privateKey.toString('hex');
 console.log("Master private Key:",masterPrivateKey);
 
+const masterPubKey = root.publicKey.toString('hex');
+console.log("Master Public Key: "masterPubKey);
+
 var path = "m/44'/60'/0'/0/0";
 
 const addrNode = root.derive(path)
