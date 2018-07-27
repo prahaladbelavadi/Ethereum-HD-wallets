@@ -4,7 +4,8 @@ const ethUtil = require('ethereumjs-util')
 const ethTx = require('ethereumjs-tx')
 var Web3 = require('web3');
 
-const mnemonic = bip39.generateMnemonic(); //generates string
+// const mnemonic = bip39.generateMnemonic(); //generates string
+const mnemonic = "torch accuse ring float position patch endless wire water primary yard desk";
 console.log("Mnemonic:",mnemonic);
 
 const seed = bip39.mnemonicToSeed(mnemonic); //creates seed buffer
@@ -27,23 +28,5 @@ console.log("pubkey to Addr:",addr);
 
 const address = ethUtil.toChecksumAddress(addr)
 console.log("Address with Check sum:",address);
-
-
-// transaction builder
-const PrivBuffKey = Buffer.from(masterPrivateKey, 'hex')
-const params = {
-  nonce:0,
-  to: '0x4584158529818ef77D1142bEeb0b6648BD8eDb2f',
-  value: '0.1',
-  gasPrice: 5000000000,
-  gasLimit: 21000,
-  chainId: 3
-}
-
-
-const tx = new ethTx(params);
-tx.sign(addrNode._privateKey); // Signing the transaction
-const serializedTx = tx.serialize()
-console.log('Serialized transaction:',serializedTx.toString('hex'));
 
 console.log('\n');
