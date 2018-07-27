@@ -42,10 +42,3 @@ const tx = new ethTx(params);
 tx.sign(addrNode._privateKey); // Signing the transaction
 const serializedTx = tx.serialize()
 console.log('Serialized transaction:',serializedTx.toString('hex'));
-
-var web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-
-//Verify connection is successful
-web3.eth.net.isListening()
-   .then(() => console.log('is connected'))
-   .catch(e => console.log('Wow. Something went wrong'));
