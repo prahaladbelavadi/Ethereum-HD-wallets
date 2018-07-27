@@ -1,8 +1,19 @@
+const assert =  require('assert')
 const bip39 = require('bip39')
 const hdkey = require('./node_modules/hdkey/lib/hdkey.js')
 const ethUtil = require('ethereumjs-util')
 const ethTx = require('ethereumjs-tx')
 var Web3 = require('web3');
+
+// deterministic rng for testing only
+function rng () = { return Buffer.from('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')}
+
+describe('Ethereum HD wallet', function(){
+    it('can generate a mnemonic', function(){
+        const input_randomness = bip39.generateMnemonic({rng:rng})
+    })
+
+})
 
 // const mnemonic = bip39.generateMnemonic(); //generates string
 const mnemonic = "torch accuse ring float position patch endless wire water primary yard desk";
